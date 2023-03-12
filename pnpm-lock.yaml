@@ -9,7 +9,12 @@ importers:
       turbo: 1.8.3
 
   packages/config:
-    specifiers: {}
+    specifiers:
+      prettier: 2.8.4
+      typescript: ^4.9.5
+    devDependencies:
+      prettier: 2.8.4
+      typescript: 4.9.5
 
   packages/eslint-config-base:
     specifiers:
@@ -20,7 +25,6 @@ importers:
       eslint-config-airbnb-typescript: ^17.0.0
       eslint-config-prettier: ^8.7.0
       eslint-plugin-import: ^2.27.5
-      prettier: ^2.8.4
       typescript: ^4.9.5
     dependencies:
       '@typescript-eslint/eslint-plugin': 5.54.1_4rfaf6mlw2mmutqjcopwvbftpu
@@ -31,7 +35,6 @@ importers:
       eslint-plugin-import: 2.27.5_grm2fcfvepvokbbqenost2xmum
     devDependencies:
       eslint: 8.36.0
-      prettier: 2.8.4
       typescript: 4.9.5
 
   packages/eslint-config-react:
@@ -47,7 +50,6 @@ importers:
       eslint-plugin-react: ^7.32.2
       eslint-plugin-react-hooks: ^4.6.0
       eslint-plugin-tailwindcss: ^3.10.1
-      prettier: ^2.8.4
       tailwindcss: ^3.2.7
       typescript: ^4.9.5
     dependencies:
@@ -63,7 +65,6 @@ importers:
       eslint-plugin-tailwindcss: 3.10.1_tailwindcss@3.2.7
     devDependencies:
       eslint: 8.36.0
-      prettier: 2.8.4
       tailwindcss: 3.2.7
       typescript: 4.9.5
 

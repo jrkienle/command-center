@@ -2,13 +2,16 @@
   "name": "@jrkienle/command-center",
   "version": "0.0.0",
   "private": true,
+  "prettier": "./packages/config/.prettierrc.cjs",
   "workspaces": [
     "apps/*",
     "packages/*",
     "services/*"
   ],
   "scripts": {
-    "build": "turbo run build"
+    "build": "turbo run build",
+    "style:check": "prettier --ignore-unknown --write .",
+    "style:format": "prettier --ignore-unknown --write ."
   },
   "devDependencies": {
     "turbo": "latest"
