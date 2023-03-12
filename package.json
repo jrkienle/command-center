@@ -10,15 +10,23 @@
   ],
   "scripts": {
     "build": "turbo run build",
+    "postinstall": "simple-git-hooks",
     "style:check": "prettier --ignore-unknown --write .",
-    "style:format": "prettier --ignore-unknown --write ."
+    "style:format": "prettier --ignore-unknown --check ."
   },
   "devDependencies": {
+    "lint-staged": "^13.2.0",
+    "simple-git-hooks": "^2.8.1",
     "turbo": "latest"
   },
   "engines": {
     "node": ">=18.0.0"
   },
-  "dependencies": {},
-  "packageManager": "pnpm@7.17.0"
+  "packageManager": "pnpm@7.17.0",
+  "simple-git-hooks": {
+    "pre-commit": "pnpm exec lint-staged"
+  },
+  "lint-staged": {
+    "*": "pnpm run style:format"
+  }
 }
