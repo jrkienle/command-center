@@ -1,0 +1,14 @@
+# Build Output
+.next
+.turbo
+dist
+
+# Dependencies
+node_modules
+
+# Logs
+.pnpm-debug.log*
+
+# Misc
+.DS_Store
+*.pem

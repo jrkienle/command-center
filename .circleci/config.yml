@@ -1,0 +1,33 @@
+version: 2.1
+jobs:
+  build:
+    docker:
+      - image: node:lts-alpine
+    steps:
+      - checkout
+      - restore_cache:
+          name: Restore pnpm Package Cache
+          keys:
+            - pnpm-packages-{{ checksum "pnpm-lock.yaml" }}
+      - run:
+          name: Install pnpm
+          command: |
+            corepack enable
+            corepack prepare pnpm@latest-7 --activate
+      - run:
+          name: Install Dependencies
+          command: |
+            pnpm install
+      - run:
+          name: Run Build
+          command: |
+            pnpm run build
+      - save_cache:
+          name: Save pnpm Package Cache
+          key: pnpm-packages-{{ checksum "pnpm-lock.yaml" }}
+          paths:
+            - node_modules
+workflows:
+  main:
+    jobs:
+      - build
