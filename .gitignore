@@ -2,9 +2,13 @@
 .next
 .turbo
 dist
+storybook-static
 
 # Dependencies
 node_modules
+
+# ESLint Cache
+.eslintcache
 
 # Logs
 .pnpm-debug.log*
@@ -12,3 +16,7 @@ node_modules
 # Misc
 .DS_Store
 *.pem
+
+# Test Output
+coverage
+test-results

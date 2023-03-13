@@ -11,8 +11,8 @@
   "scripts": {
     "build": "turbo run build",
     "postinstall": "simple-git-hooks",
-    "style:check": "prettier --ignore-unknown --write .",
-    "style:format": "prettier --ignore-unknown --check ."
+    "style:check": "prettier --ignore-unknown --check .",
+    "style:format": "prettier --ignore-unknown --write ."
   },
   "devDependencies": {
     "lint-staged": "^13.2.0",

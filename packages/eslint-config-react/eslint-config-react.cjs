@@ -1,5 +1,3 @@
-const base = require('./eslint-base.cjs');
-
 module.exports = {
   extends: [
     'airbnb',

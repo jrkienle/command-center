@@ -1,0 +1,7 @@
+{
+  "extends": "@jrkienle/config/tsconfig.json",
+  "include": ["src/**/*.ts", "src/**/*.tsx"],
+  "compilerOptions": {
+    "baseUrl": "./src"
+  }
+}
